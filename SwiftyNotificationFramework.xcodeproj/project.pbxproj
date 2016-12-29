@@ -10,6 +10,8 @@
 		7F528AAA1E1590F90013D64D /* SwiftyNotificationFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F528AA01E1590F90013D64D /* SwiftyNotificationFramework.framework */; };
 		7F528AAF1E1590F90013D64D /* SwiftyNotificationFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F528AAE1E1590F90013D64D /* SwiftyNotificationFrameworkTests.swift */; };
 		7F528AB11E1590F90013D64D /* SwiftyNotificationFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F528AA31E1590F90013D64D /* SwiftyNotificationFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7F528ABB1E15911C0013D64D /* SwiftyNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F528ABA1E15911C0013D64D /* SwiftyNotification.swift */; };
+		7F528ABD1E15A06A0013D64D /* SwiftyNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F528ABC1E15A06A0013D64D /* SwiftyNotificationCenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		7F528AA91E1590F90013D64D /* SwiftyNotificationFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyNotificationFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F528AAE1E1590F90013D64D /* SwiftyNotificationFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyNotificationFrameworkTests.swift; sourceTree = "<group>"; };
 		7F528AB01E1590F90013D64D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F528ABA1E15911C0013D64D /* SwiftyNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyNotification.swift; sourceTree = "<group>"; };
+		7F528ABC1E15A06A0013D64D /* SwiftyNotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyNotificationCenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				7F528AA31E1590F90013D64D /* SwiftyNotificationFramework.h */,
+				7F528ABA1E15911C0013D64D /* SwiftyNotification.swift */,
+				7F528ABC1E15A06A0013D64D /* SwiftyNotificationCenter.swift */,
 				7F528AA41E1590F90013D64D /* Info.plist */,
 			);
 			path = SwiftyNotificationFramework;
@@ -148,6 +154,7 @@
 				TargetAttributes = {
 					7F528A9F1E1590F90013D64D = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					7F528AA81E1590F90013D64D = {
@@ -196,6 +203,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F528ABB1E15911C0013D64D /* SwiftyNotification.swift in Sources */,
+				7F528ABD1E15A06A0013D64D /* SwiftyNotificationCenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +329,7 @@
 		7F528AB51E1590F90013D64D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -331,6 +341,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = dnthome.SwiftyNotificationFramework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -338,6 +349,7 @@
 		7F528AB61E1590F90013D64D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -356,6 +368,7 @@
 		7F528AB81E1590F90013D64D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = SwiftyNotificationFrameworkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dnthome.SwiftyNotificationFrameworkTests;
@@ -367,6 +380,7 @@
 		7F528AB91E1590F90013D64D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = SwiftyNotificationFrameworkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dnthome.SwiftyNotificationFrameworkTests;
