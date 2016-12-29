@@ -16,6 +16,8 @@ fileprivate struct WeakHolder <KEYTYPE: Hashable, VALUETYPE, RETURNTYPE> {
 public class SwiftyNotification <KEYTYPE: Hashable, VALUETYPE, RETURNTYPE> {
 	private var subscribers = [WeakHolder<KEYTYPE, VALUETYPE, RETURNTYPE>]()
 	
+	public init(){}
+	
 	/**
 	Will broadcast and send info to all subscribers of this notification and return objects if any.
 	- parameter info: This dictionary will be sent to all subscribers

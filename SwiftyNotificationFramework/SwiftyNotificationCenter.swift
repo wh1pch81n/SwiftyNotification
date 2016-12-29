@@ -9,6 +9,4 @@
 import Foundation
 
 // A globally accessable place to store SwiftNotification instances
-final public class SwiftyNotificationCenter {
-	public let sharedInstance = SwiftyNotificationCenter()
-}
+public struct SwiftyNotificationCenter {}
